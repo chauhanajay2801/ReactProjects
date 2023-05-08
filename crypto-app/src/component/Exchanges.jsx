@@ -6,7 +6,7 @@ const Exchanges = () => {
 
   useEffect(() => {
 
-    const fetchExchange = async()=>{
+    const fetchExchange = async()=> {
       const {data} = await axios.get(`${server}`)
     }
   },[])
