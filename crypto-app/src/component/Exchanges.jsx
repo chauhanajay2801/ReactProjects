@@ -3,6 +3,8 @@ import axios from 'axios';
 import { server } from '../index';
 import { Container, HStack } from '@chakra-ui/react';
 import Loader from './Loader';
+import { wrap } from 'framer-motion';
+import ExhangeCard from './ExhangeCard';
 
 
 const Exchanges = () => {
@@ -24,10 +26,16 @@ const [loading, setLoading] = useState(true)
   return <Container maxW={"container.xl"}>
     {loading? <Loader/> : <>
     
-    <HStack>
+    <HStack wrap={'wrap'}>
       {
         exchanges.map((i)=>(
-          <div>{i.name}</div>
+
+          <ExhangeCard 
+          key={i.id}
+          name={i.name} 
+          img={i.image} 
+          rank={i.trust_score_rank} 
+          url={i.url}/>
         ))
       }
     </HStack>
