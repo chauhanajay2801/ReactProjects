@@ -9,17 +9,22 @@ import ExhangeCard from './ExhangeCard';
 
 const Coins = () => {
 
-const [exchanges, setExchanges] = useState([]);
+const [coins, setCoins] = useState([]);
 
 const [loading, setLoading] = useState(true)
 
 const [error, setError] = useState(false)
 
+const [page, setPage] = useState(1)
+
+const [currency, setCurrency] = useState("inr")
+
   useEffect(() => {
-    const fetchExchange = async()=> {
+    const fetchCoins = async()=> {
       try{
-        const { data } = await axios.get(`${server}/exchanges`);
-      setExchanges(data);
+        const { data } = await axios.get(`${server}/coins/markets?vs_currency=${currency}`);
+        console.log(data);
+      setCoins(data);
       setLoading(false);
     }
     catch(error){
@@ -28,17 +33,17 @@ const [error, setError] = useState(false)
 
       }
     };
-    fetchExchange(); 
+    fetchCoins(); 
   },[])
 
-  if(error) return <Error message = {"Error while fetching exchanges"}/>
+  if(error) return <Error message = {"Error while fetching Coins"}/>
 
   return <Container maxW={"container.xl"}>
     {loading? <Loader/> : <>
     
     <HStack wrap={'wrap'}>
       {
-        exchanges.map((i)=>(
+        coins.map((i)=>(
 
           <ExhangeCard 
           key={i.id}
