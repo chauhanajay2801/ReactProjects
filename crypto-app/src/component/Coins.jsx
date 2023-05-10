@@ -22,8 +22,7 @@ const [currency, setCurrency] = useState("inr")
   useEffect(() => {
     const fetchCoins = async()=> {
       try{
-        const { data } = await axios.get(`${server}/coins/markets?vs_currency=${currency}`);
-        console.log(data);
+        const { data } = await axios.get(`${server}/coins/markets?vs_currency=${currency}&page=${page}`);
       setCoins(data);
       setLoading(false);
     }
@@ -34,7 +33,7 @@ const [currency, setCurrency] = useState("inr")
       }
     };
     fetchCoins(); 
-  },[])
+  },[currency,page])
 
   if(error) return <Error message = {"Error while fetching Coins"}/>
 
