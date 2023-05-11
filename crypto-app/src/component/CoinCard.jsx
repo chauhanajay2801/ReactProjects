@@ -3,7 +3,7 @@ import { VStack, Image, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const CoinCard = ({id,name,img,symbol,price,currencySymbol="₹"}) => {
-  <Link to ={`/coins/${id}`} target={"blank"}> {/* //becuse this time wee need react page instead of any other website */}
+  <Link to ={`/coins/${id}`}> {/* //becuse this time wee need react page instead of any other website */}
   <VStack w={'52'} shadow={'lg'} p={'8'} 
   borderRadius={'lg'} transition={'all 0.5s'}
   m={'4'}
