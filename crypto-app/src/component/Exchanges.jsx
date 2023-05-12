@@ -36,7 +36,7 @@ const [error, setError] = useState(false)
   return <Container maxW={"container.xl"}>
     {loading? <Loader/> : <>
     
-    <HStack wrap={'wrap'}>
+    <HStack wrap={'wrap'} justifyContent={'space-evenly'}>
       {
         exchanges.map((i)=>(
 
