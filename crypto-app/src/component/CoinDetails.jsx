@@ -16,9 +16,8 @@ const CoinDetails = () => {
   useEffect(() => {
     const fetchCoin = async () => {
       try {
-        const { data } = await axios.get(
-          `${server}/coins/${params.id}`
-        );
+        const { data } = await axios.get(`${server}/coins/${params.id}`);
+        console.log(data)
         setCoin(data);
         setLoading(false);
       } catch (error) {
@@ -26,8 +25,8 @@ const CoinDetails = () => {
         setLoading(false);
       }
     };
-    fetchCoins();
-  }, [currency, page]);
+    fetchCoin();
+  }, [params.id]);
 
   return;
   <Container maxW={"container.xl"}>
