@@ -22,7 +22,42 @@ const Home = () => {
   return (
     <Box>
       <MyCarousel />
-      
+      <Container maxW={'container.xl'} minH={'100vh'} p="16">
+        <Heading
+          textTransform={'uppercase'}
+          py={'2'}
+          m={'auto'}
+          width={'fit-content'}
+          borderBottom={'2px solid'}>
+          Services
+        </Heading>
+
+        <Stack
+          height={'full'}
+          p={'4'}
+          alignItems={'center'}
+          direction={['column', 'row']}
+        >
+          <Image src={img5} h={('40', '400')} filter={'hue-rotate(130deg)'} />
+
+          <Text
+            letterSpacing={'widest'}
+            lineHeight={'190%'}
+            p={['4', '16']}
+            textAlign={'center'}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            officiis neque ea tempore enim odit quisquam sunt nulla, ex maiores
+            voluptatem, tempora a placeat officia consectetur nam temporibus.
+            Omnis consequuntur quae repelluo perspiciatis ab eriam sint optio
+            alias earum iure nisi dolorem. Officiis ex maiores, modi harum rem
+            non doloribus nostrum adipisci perspiciatis culpa dolore fuga
+            dolores quod exercitationem ratione nam tempora qui delectus magnam
+            eos cupiditate omnis sequi. Minus porro saepe et harum consequuntur,
+            ut magnam accusamus repellendus soluta!
+          </Text>
+        </Stack>
+      </Container>
     </Box>
   );
 };
