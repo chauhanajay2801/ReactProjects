@@ -36,7 +36,7 @@ const Home = () => {
           height={'full'}
           p={'4'}
           alignItems={'center'}
-          direction={['column', 'row']}
+          direction={['column', 'row']} // responsive first for phone second for big screen
         >
           <Image src={img5} h={('40', '400')} filter={'hue-rotate(130deg)'} />
 
