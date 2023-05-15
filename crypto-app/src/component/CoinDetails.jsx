@@ -1,7 +1,6 @@
 import {
   Badge,
   Box,
-  Button,
   Container,
   HStack,
   Image,
@@ -34,7 +33,6 @@ const CoinDetails = () => {
   const currencySymbol =
     currency === "inr" ? "₹" : currency === "eur" ? "€" : "$";
 
-
   useEffect(() => {
     const fetchCoin = async () => {
       try {
@@ -62,10 +60,6 @@ const CoinDetails = () => {
         <Loader />
       ) : (
         <>
-          <Box width={"full"} borderWidth={1}>
-            
-          </Box>
-
           <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
             <HStack spacing={"4"}>
               <Radio value={"inr"}>INR</Radio>
