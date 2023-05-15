@@ -36,11 +36,7 @@ const CoinDetails = () => {
   useEffect(() => {
     const fetchCoin = async () => {
       try {
-        const { data } = await axios.get(`${server}/coins/${params.id}`);
-
-        const { data: chartData } = await axios.get(
-          `${server}/coins/${params.id}/market_chart?vs_currency=${currency}&days=${days}`
-        );
+        const { data } = await axios.get(`${server}/coins/${params.id}`);   
         setCoin(data);
         // setChartArray(chartData.prices);
         setLoading(false);
