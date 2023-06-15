@@ -1,0 +1,38 @@
+.navbar-container {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 200px;
+}
+
+.list-container > ul{
+    display: flex;
+    list-style: none;
+    font-size: 25px;
+}
+
+.list-container>ul>li{
+    margin: 10px;
+    padding: 10px;
+}
+
+.rest-space{
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .rest-card{
+    width: 200px;
+    height: 350px;
+    padding: 5px;
+    margin: 5px;
+  
+  }
+
+  .rest-logo{
+    width: 100%;
+  }
