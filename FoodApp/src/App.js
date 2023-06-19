@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from "react-dom/client";
-
+import Header from './Components/Header';
 
 const  MainComponent = () => {
   return (
-    <div>Main</div>
+    <Header/>
   )
 }
 
