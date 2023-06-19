@@ -31,8 +31,30 @@
 .login-btn {
     height: 30px;
     width: 70px;
+    border: 1px solid red;
 }
 
 .login-btn:hover {
+    cursor: pointer;
+}
+
+.body-upper {
+    display: flex;
+    padding: 1px;
+}
+
+.btn-bod > button:hover {
+   cursor: pointer;
+}
+
+.body-search{
+    margin-left: 10px;
+}
+
+/* .body-search > input :hover {
+    cursor: pointer;
+} */
+
+.body-search > button :hover {
     cursor: pointer;
 }
