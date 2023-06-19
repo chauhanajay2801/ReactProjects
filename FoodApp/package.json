@@ -1,11 +1,11 @@
 {
   "name": "foodapp",
   "version": "1.0.0",
-  "description": "Food application",
+  "description": "Food ordering app ",
   "scripts": {
+    "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "jest"
+    "build": "parcel build index.html"
   },
   "author": "Ajay Chauhan",
   "license": "ISC",
@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-router-dom": "^6.13.0"
   }
 }
