@@ -1,5 +1,9 @@
+import { useState } from "react"
+
+
 
 const Header = () => {
+  const [login, setlogin] = useState("Login")
     return(
         <div className="header-component">
         <div className="image-container">
@@ -11,7 +15,13 @@ const Header = () => {
            <li>Cart</li>
            <li>About Us</li>
            <li>
-            <button className="login-btn">Login</button>
+            <button className="login-btn" 
+            onClick={() =>{
+              login==="Login"?
+              setlogin("Logout"):
+              setlogin("Login")
+            }}
+             >{login}</button>
            </li>
          </ul>
         </div>

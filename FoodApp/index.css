@@ -38,23 +38,50 @@
     cursor: pointer;
 }
 
+/* Body css */
+
 .body-upper {
     display: flex;
     padding: 1px;
 }
 
 .btn-bod > button:hover {
-   cursor: pointer;
+    cursor: pointer;
+    border: 1px solid red;
 }
 
 .body-search{
     margin-left: 10px;
 }
 
-/* .body-search > input :hover {
-    cursor: pointer;
-} */
 
-.body-search > button :hover {
+.body-search > button:hover {
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+/* Restaurant card css */
+
+.res-containerr{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.res-card {
+    height: 300px;
+    width: 200px;
+    padding: 5px;
+    background-color: bisque;
+    margin: 5px;
+}
+
+.res-card:hover{
+    border: 1px solid red;
     cursor: pointer;
 }
+
+.rest-logo{
+    width: 100%;
+}
+
