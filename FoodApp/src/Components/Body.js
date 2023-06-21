@@ -5,8 +5,10 @@ import Shimmer from "./Shimmer"
 
 
 const Body = () => {
-  // const [filteredList, setfilteredList] = useState([]);
+  const [filteredList, setfilteredList] = useState([]);
   const [listOfRestaurant, setlistOfRestaurant] = useState([])
+  const [searchText, setsearchText] = useState("")
+
   
   useEffect(() => {
     fetchData();
@@ -17,7 +19,7 @@ const Body = () => {
     const json = await data.json();
     //optional chaining
     setlistOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-    // setfilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setfilteredList(json?.data?.cards[2]?.data?.data?.cards);
   };
 
  <div className="shimmer-container">
@@ -40,12 +42,18 @@ const Body = () => {
           >Top Restaurant</button>
         </div>
         <div className="body-search">
-          <input type="text" name="" id="" />
-          <button type="submit">Search</button>
+          <input type="text" value={searchText} onChange={(e)=>{
+            setsearchText(e.target.value)
+          }} />
+          <button type="submit" onClick={()=>{
+            const filteredRestaurant = listOfRestaurant.filter
+            ((res)=>res.data.name.toLowerCase().includes(searchText.toLocaleLowerCase()));
+            setfilteredList(filteredRestaurant)
+          }}>Search</button>
         </div>
       </div>
       <div className="res-containerr">
-      {listOfRestaurant?.map((restaurant) => 
+      {filteredList?.map((restaurant) => 
      (<RestaurantCard
      key = {restaurant?.data?.id}
      ResData={restaurant}/>))
