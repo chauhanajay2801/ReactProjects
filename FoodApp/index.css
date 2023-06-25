@@ -1,4 +1,9 @@
-.header-component {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .header-component {
     display: flex;
     justify-content: space-between;
     background-color: bisque;
@@ -40,7 +45,7 @@
 
 /* Body css */
 
-.body-upper {
+/* .body-upper {
     display: flex;
     padding: 1px;
 }
@@ -58,11 +63,11 @@
 .body-search > button:hover {
     cursor: pointer;
     border: 1px solid red;
-}
+} */
 
 /* Restaurant card css */
 
-.res-containerr{
+/* .res-containerr{
     display: flex;
     flex-wrap: wrap;
 
@@ -83,12 +88,12 @@
 
 .rest-logo{
     width: 100%;
-}
+} */
 
 /* Shimmer Ui */
 
-.shimmer-container{
+/* .shimmer-container{
     display: flex;
     flex-wrap: wrap;
 
-}
+} */ 
