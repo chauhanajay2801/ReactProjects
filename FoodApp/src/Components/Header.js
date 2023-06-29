@@ -8,7 +8,7 @@ const Header = () => {
     return(
         <div className="flex justify-between bg-teal-100 shadow-md">
         <div className="image-container">
-          <img className=" h-28 p-1 " src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"/>
+        <Link to="/"><img className=" h-28 p-1 " src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"/></Link>
         </div>
         <div className="">
          <ul className="flex justify-evenly py-10 ">

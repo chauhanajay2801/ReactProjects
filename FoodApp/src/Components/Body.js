@@ -48,14 +48,14 @@ const Body = () => {
             setsearchText(e.target.value)
           }} />
           <button className="rounded-md shadow-xl ml-2 bg-teal-100 hover:bg-teal-600 font-medium w-28 h-19" type="submit" onClick={()=>{
-            const filteredRestaurant = listOfRestaurant.filter
+            const fR = filteredRestaurant.filter
             ((res)=>res.data.name.toLowerCase().includes(searchText.toLocaleLowerCase()));
-            setlistOfRestaurant(filteredRestaurant)
+            setlistOfRestaurant(fR)
           }}>Search</button>
         </div>
       </div>
       <div className="res-containerr">
-      {filteredRestaurant?.map((restaurant) => 
+      {listOfRestaurant?.map((restaurant) => 
      (<RestaurantCard
      key = {restaurant?.data?.id}
      ResData={restaurant}/>))
